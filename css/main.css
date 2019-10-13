@@ -277,10 +277,12 @@ html {
   height: 100%;
   width: 100%;
   padding: 0px 0px 0px 0px;
+  touch-action: none;
 }
 
 #mainggh {
   width: 100%;
+  touch-action: none;
 }
 
 section {
