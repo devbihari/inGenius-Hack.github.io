@@ -146,23 +146,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
       ingeniuscontainer.classList.add("fade-out");
       gghcontainer.style.transition = "all 1s";
       gghcontainer.style.display = "block";
-      ingeniuscontainer.style.display = "hidden";
+      ingeniuscontainer.style.display = "block";
       if (navigator.userAgent.indexOf("Firefox") > 0) {
         gghSwitchText.style.marginTop = "-55px";
       }
-    } else if (!mainSwitch.checked) {
+      mainSwitch.checked = true;
+      $(".ig-img img").toggleClass("hidden");
+      $("#white-in").toggleClass("white-in");
+      $("#blue-genius").toggleClass("blue-genius");
+      $("#white-girl").toggleClass("white-girl");
+      $("#yellow-geeks").toggleClass("yellow-geeks");
+      $(".ggh-img img").toggleClass("hidden");
+    }
+     else if (!mainSwitch.checked) {
       gghcontainer.style.transform = "translateX(100%)";
       gghcontainer.style.transition = "all 1s left";
       ingeniuscontainer.style.transform = "translateX(0)";
       gghcontainer.classList.remove("fade-in");
       ingeniuscontainer.classList.remove("fade-out");
       gghcontainer.classList.add("fade-out");
-      gghcontainer.style.display = "hidden";
-      ingeniuscontainer.style.display = "block";
       ingeniuscontainer.classList.add("fade-in");
       if (navigator.userAgent.indexOf("Firefox") > 0) {
         gghSwitchText.style.marginTop = "-75px";
       }
+      mainSwitch.checked = false;
+      $(".ig-img img").toggleClass("hidden");
+      $("#white-in").toggleClass("white-in");
+      $("#blue-genius").toggleClass("blue-genius");
+      $("#white-girl").toggleClass("white-girl");
+      $("#yellow-geeks").toggleClass("yellow-geeks");
+      $(".ggh-img img").toggleClass("hidden");
     }
   });
 
