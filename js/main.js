@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       ingeniuscontainer.classList.add("fade-out");
       gghcontainer.style.transition = "all 1s";
       gghcontainer.style.display = "block";
-      ingeniuscontainer.style.display = "block";
+      ingeniuscontainer.style.display = "hidden";
       if (navigator.userAgent.indexOf("Firefox") > 0) {
         gghSwitchText.style.marginTop = "-55px";
       }
@@ -157,6 +157,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
       gghcontainer.classList.remove("fade-in");
       ingeniuscontainer.classList.remove("fade-out");
       gghcontainer.classList.add("fade-out");
+      gghcontainer.style.display = "hidden";
+      ingeniuscontainer.style.display = "block";
       ingeniuscontainer.classList.add("fade-in");
       if (navigator.userAgent.indexOf("Firefox") > 0) {
         gghSwitchText.style.marginTop = "-75px";
